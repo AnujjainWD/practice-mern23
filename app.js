@@ -43,7 +43,7 @@ app.set('view engine','ejs')
 //route localhost:3000
 app.use('/',web)
 
-//static files
+//static filesgfkjdkjdgjkdghj
 app.use(express.static('public'))
 
 
