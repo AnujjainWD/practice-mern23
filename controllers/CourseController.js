@@ -3,7 +3,7 @@ const CourseModel = require("../models/Course")
 class CourseController {
     static course_insert = async(req,res)=>{
         try {
-     console.log(req.body)
+    //  console.log(req.body)
         const result = new CourseModel({
             name: req.body.name,
             email: req.body.email,

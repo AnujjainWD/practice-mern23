@@ -10,6 +10,9 @@ const islogin = require('../middleware/islogin')
 
 
 //front controller
+router.get('/course',checkuserauth,FrontController.course)
+router.get('/contact',checkuserauth,FrontController.contact)
+router.get('/about',checkuserauth,FrontController.about)
 router.get('/',islogin,FrontController.login)
 router.post('/change_password',checkuserauth,FrontController.change_password)
 router.get("/",FrontController.login)

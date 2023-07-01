@@ -35,6 +35,26 @@ class FrontController {
             console.log(error)
         }
     }
+    static about = async (req, res) => {
+        try {
+          const { name, email, _id, image ,mobile } = req.user;
+          const data = await UserModel.find()
+          res.render('about',{n:name,image:image,id:_id,e:email,m:mobile,d:data});
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
+      static course = async (req, res) => {
+        try {
+          const { name, email, _id, image ,mobile } = req.user;
+          const data = await UserModel.find()
+          res.render('course',{n:name,image:image,id:_id,e:email,m:mobile,d:data});
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
 
     static insert = async (req, res) => {
         // console.log(req.files.image)
@@ -176,6 +196,17 @@ class FrontController {
           console.log(error);
         }
       };
+
+    static contact = async (req, res) => {
+        try {
+          const { name, email, _id, image ,mobile } = req.user;
+          const data = await UserModel.find()
+          res.render('contact',{n:name,image:image,id:_id,e:email,m:mobile,d:data});
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    
 
     static change_password = async (req, res) => { 
         try {
