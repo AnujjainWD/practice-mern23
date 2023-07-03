@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const live_url = 'mongodb+srv://anujj1237:<anujj1237>@cluster0.xolnjke.mongodb.net/'
 const connectDB=()=>{
     // For local DB
-    return mongoose.connect(url)
+    return mongoose.connect(live_url)
 
 
     // For cloud DB
